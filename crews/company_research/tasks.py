@@ -123,9 +123,8 @@ def create_validation_task(agent, previous_tasks):
         3. Verify all career page URLs are working. If not specified, find them.
         4. Standardize formats
         5. Add any missing critical information
-        6. Propagate information from previous tasks
         
-        Create a final, clean list of all institutions you checked. Make sure you return the proper JSON list.
+        Create a final, clean list of all institutions you checked. Make sure you return the proper JSON list and that it is not empty.
         """,
         expected_output="""
         A final JSON list of validated, deduplicated institutions:

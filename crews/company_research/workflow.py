@@ -84,6 +84,7 @@ class CompanyResearchWorkflow:
         
         agent_research = create_institution_type_researcher_agent()
         tasks = []
+
         for company in USER_PROVIDED_COMPANIES:
             print(f" Researching: {company}")
             task = create_similar_institutions_task(agent_research, company)
@@ -91,13 +92,13 @@ class CompanyResearchWorkflow:
                 
         crew = Crew(
             agents=[agent_research],
-            tasks=[tasks],
+            tasks=tasks,
             process=Process.sequential,
             verbose=OUTPUT_CONFIG['verbose']
         )
         
         result = crew.kickoff()
-        self.all_tasks.append(tasks)
+        self.all_tasks.extend(tasks)
         return result
 
     def run_validation_and_consolidation(self):
@@ -126,13 +127,13 @@ class CompanyResearchWorkflow:
         print("="*60)
         
         try:
-            # Step 1: Research by interests
-            print("\nSTEP 1: Interest-based research")
-            self.run_interest_research()
+            # # Step 1: Research by interests
+            # print("\nSTEP 1: Interest-based research")
+            # self.run_interest_research()
 
-            # Step 2: Research user-provided companies  
-            print("\nSTEP 2: User-provided companies research")
-            self.run_user_institutions_research()
+            # # Step 2: Research user-provided companies  
+            # print("\nSTEP 2: User-provided companies research")
+            # self.run_user_institutions_research()
 
             # Step 3: Research similar institutions  
             print("\nSTEP 3: Similar to user-provided companies research")

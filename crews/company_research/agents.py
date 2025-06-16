@@ -24,7 +24,7 @@ def create_interest_researcher_agent():
         companies, and research organizations across different domains. You're particularly 
         good at identifying lesser-known but relevant organizations.""",
         verbose=True,
-        tools=[SerperDevTool(), ScrapeWebsiteTool()],
+        tools=[search_tool, ScrapeWebsiteTool()],
         allow_delegation=False
     )
 
@@ -38,7 +38,7 @@ def create_institution_type_researcher_agent():
         research institutes, government agencies, and NGOs. You know how to find comprehensive 
         lists and directories for each type.""",
         verbose=True,
-        tools=[SerperDevTool(), ScrapeWebsiteTool()],
+        tools=[search_tool, ScrapeWebsiteTool()],
         allow_delegation=False
     )
 
