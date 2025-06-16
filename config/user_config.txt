@@ -1,0 +1,35 @@
+# Job Search System - User Configuration
+# Fill in your information below. Lines starting with # are comments and will be ignored.
+
+# PERSONAL INFORMATION
+CV_FILE_PATH=path/to/your/cv.pdf
+LINKEDIN_PROFILE=https://linkedin.com/in/sgazagnes
+EMAIL=your.email@example.com
+
+# JOB SEARCH PREFERENCES
+# List your interests, one per line after the = sign, separated by commas#, Healthcare, Physics, Energy
+USER_INTERESTS=Scientific Computing
+
+
+# Geographic preferences - countries where you want to work
+GEOGRAPHIC_FOCUS=Netherlands
+
+# COMPANIES OF INTEREST
+# Companies you specifically want to research (comma-separated), Netherlands eScience CenterTNO, 
+COMPANIES_OF_INTEREST=SURF Netherlands
+
+# Companies you are NOT interested in (comma-separated)
+COMPANIES_TO_EXCLUDE=Amazon, Meta, Facebook, ASML
+
+# SEARCH PREFERENCES
+# Types of institutions to search (leave as is unless you want to modify)
+INSTITUTION_TYPES=universities, companies, startups, research_institutes, government_agencies
+
+# Search configuration
+SEARCH_LOCATION=Europe
+SEARCH_LOCALE=en-GB
+MAX_RESULTS_PER_SEARCH=10
+
+# OUTPUT PREFERENCES
+OUTPUT_FILENAME=my_job_research_results.csv
+VERBOSE_OUTPUT=false

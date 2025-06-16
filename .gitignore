@@ -1,0 +1,10 @@
+/.~lock.institutions_job_research.csv#
+/company_finder.py
+/institutions_job_research.csv
+/jobs_finder.py
+# Ignore all __pycache__ directories everywhere
+__pycache__/
+**/__pycache__/
+
+# Ignore all .pyc files recursively
+*.py[cod]
